@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Clasificación de defectos e informes de calidad </title>
+        <meta meta name="description" content="Comprender la clasificación de defectos, tablas militares, informes de calidad, indicadores de calidad, técnicas de calidad, 7 herramientas de calidad, histograma, Pareto, diagrama causa efectos, estratificación, diagrama de correlación, diagrama de control, acciones de calidad. Identificar los indicadores de calidad, realizar cálculo de indicadores. Realizar plan de muestreo por aceptación, usando tablas militares. Comprender procedimiento de herramientas básicas de control de calidad. Desarrollar hojas de verificación, diagrama de Pareto, Histograma, dispersión, causa-efectos, estratificación y de control. Análisis de resultados, Desarrollar planes de calidad. Desarrollar acciones correctivas y de mejora.">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#ResultadosAprendizaje"><span class="text-white">Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#IndiceTematico"><span class="text-white">Contenidos</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#Creditos"><span class="text-white">Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">CONTROL DE CALIDAD EN CONFECCIÓN INDUSTRIAL</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Clasificación de defectos e informes de calidad </h1>
+                                <div class="brand-line-primary"></div>
+                                <p class="curso-descripcion">Comprender la clasificación de defectos, tablas militares, informes de calidad, indicadores de calidad, técnicas de calidad, 7 herramientas de calidad, histograma, Pareto, diagrama causa efectos, estratificación, diagrama de correlación, diagrama de control, acciones de calidad. Identificar los indicadores de calidad, realizar cálculo de indicadores. Realizar plan de muestreo por aceptación, usando tablas militares. Comprender procedimiento de herramientas básicas de control de calidad. Desarrollar hojas de verificación, diagrama de Pareto, Histograma, dispersión, causa-efectos, estratificación y de control. Análisis de resultados, Desarrollar planes de calidad. Desarrollar acciones correctivas y de mejora.</p>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.png" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li> <span>290601232-03. Clasificar prendas de acuerdo con los criterios de calidad establecidos por la empresa y/o cliente.</span></li>
+                            <li> <span>290601232-04. Elaborar informes de calidad aplicando herramientas de mejora continua, de acuerdo con las políticas de la empresa.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-play"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#introduccion">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#introduccion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Clasificación de defectos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Informes de calidad</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="introduccion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="jumbotron bg-white"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img1.jpg" alt="">
+                        <div class="caja-amarillo">
+                            <p>Una vez se conoce cuáles son los defectos es importante clasificar los niveles para las actividades de inspección y determinar las diferentes acciones a definir para mejorar o mantener la calidad de la producción de las prendas. Los resultados de las inspecciones se deben presentar en informes donde se logren visualizar y calcular indicadores que permitan medir los resultados.</p>
+                            <p>Las siete herramientas de calidad son las técnicas básicas usadas en el control de calidad, su propósito es analizar, medir y controlar, conforme a las fases de Seis sigma; permiten conocer las causas de los defectos y así establecer acciones correctivas y de mejora de la calidad. Estas herramientas mediante el uso de tablas y diagramas permiten observar de manera concreta los problemas presentados, con los datos recolectados.</p>
+                        </div>
+                        <section class="mt-5"></section>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-1">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>1. Maquinaria y equipos en diferentes líneas de producción.</h1>
+                    </div>
+                    <div class="jumbotron bg-white"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img2.jpg" alt="">
+                        <div class="caja-amarillo">
+                            <p>Los errores presentados en las operaciones y en los procesos realizados con cada prenda, se deben catalogar, con el fin de realizar los análisis necesarios y así corregir de forma rápida, creando estrategias que generen cambios concretos al ir directamente a la operación y al proceso a ajustar. La empresa puede generar el listado de defectos en donde se diferencien los niveles de estos con el fin de aceptar o rechazar las prendas que comprenden un lote.</p>
+                        </div>
+                        <div class="sub-ecored mt-5" id="11">
+                            <h2>1.1. Nivel del defecto</h2>
+                        </div>
+                        <p class="mt-5">Una vez se desarrolla una referencia, se determinan sus especificaciones. En el proceso de producción estas pueden variar y se deben establecer tolerancias con las cuales se permita un margen y se admitan dichas variaciones. </p>
+                        <p>Es así como se hacen necesarios los estándares de calidad para poder evaluar los niveles de calidad de una característica cualitativa o cuantitativa a las cuales corresponden tributos o variables respectivamente. </p>
+                        <p>En relación con lo anterior, para evaluar la calidad de las prendas se deben establecer niveles de defectos para poder medir el Nivel de Calidad Límite (NCL), teniendo claro todos los defectos que se pueden presentar en una prenda y el nivel del defecto máximo para así decidir si se acepta o se rechaza la muestra o el lote.</p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-4"><img class="img-fluid" src="assets/images/pages/ilustraciones/img3.jpg" alt=""></div>
+                            <div class="col-8">
+                                <h3>Defecto menor</h3>
+                                <p>Es la discrepancia que existe del estándar, pero a su vez no afecta la capacidad de uso de la prenda, se puede incurrir en costos pequeños y adicionar operaciones para corregir el defecto, estos causan insatisfacción en el cliente. Algunos de los errores más comunes son las costuras sin pulir, es decir hebras de hilos sin cortar; también los colores de los hilos tienen un tono un poco diferente al especificado. Si el defecto no se corrige de la mejor forma se convierte en defecto mayor.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-4"><img class="img-fluid" src="assets/images/pages/ilustraciones/img4.jpg" alt=""></div>
+                            <div class="col-8">
+                                <h3>Defecto mayor</h3>
+                                <p>Los defectos mayores causan que la prenda no funcione de acuerdo con su diseño, provocan que los productos no puedan ser vendidos y se incurren en costos para su reproceso. Algunos ejemplos comunes son agujeros, discrepancias en medidas que causen asimetrías como una manga más larga que otra. En el caso que no se pueda realizar la óptima corrección el defecto se convertirá en crítico.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-4"><img class="img-fluid" src="assets/images/pages/ilustraciones/img5.jpg" alt=""></div>
+                            <div class="col-8">
+                                <h3>Defecto crítico</h3>
+                                <p>Los defectos críticos, son considerados inseguros y/o peligrosos al usarse y pueda lastimar al consumidor, además reducen la confianza en el uso de la prenda y se incurre en un alto costo en reprocesos o es muy difícil poder recuperar la funcionalidad de esta. Un ejemplo que se puede presentar es un alfiler en la prenda. </p>
+                            </div>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img6.svg" alt="">
+                        <div class="sub-ecored mt-5" id="12">
+                            <h2>1.2. Ubicación del defecto</h2>
+                        </div>
+                        <p class="mt-5">Para establecer la causa del defecto, es primordial ubicar el lugar donde se presentó el defecto, de allí la importancia de la trazabilidad en el proceso de confección de las prendas. </p>
+                        <p>Teniendo en cuenta las áreas y los puntos de control en la planta de confección se clasifica la ubicación del defecto para así mismo establecer responsabilidades y conforme a lo mencionado definir las acciones de mejora.</p>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-11">
+                                <nav class="nav-tab-ecored my-5">
+                                    <div class="tab-content fondo-azul" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-01" role="tabpanel" aria-labelledby="nav-01-tab">
+                                            <h3>Patronaje</h3>
+                                            <div class="cinta-azul mt-5"></div>
+                                            <p class="mt-5">Interpretar de forma incorrecta el diseño y desarrollar con las transformaciones, son deficiencias en las piezas, que causan defectos, en su mayoría pueden ser denominados defectos mayores en las prendas, algunos se pueden observar en la siguiente tabla:</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img7.svg" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-02" role="tabpanel" aria-labelledby="nav-02-tab">
+                                            <h3>Corte</h3>
+                                            <p class="mt-5">En cada actividad del proceso de corte se pueden presentar defectos, algunas veces la responsabilidad de SU presencia puede compartirse con el proceso anterior de patronaje, las acciones pueden ser correctivas en el área de confección. Algunos defectos se pueden observar en la siguiente tabla:</p>
+                                            <div class="cinta-azul mt-5"></div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img8.svg" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-03" role="tabpanel" aria-labelledby="nav-03-tab">
+                                            <h3>Confección</h3>
+                                            <p class="mt-5">La gran cantidad de mano de obra en este proceso aumenta la variabilidad de la prenda y se requieren altos controles para evitar la presencia de defectos, con el fin de retener las piezas, prendas en proceso o prendas terminadas. Se deben tener en cuenta las áreas de visibilidad de la prenda para clasificar de esta forma los tipos de defectos, por consiguiente, se tiene área visible, menos visible y no visible, en donde a mayor visibilidad se debe considerar el rechazo de la prenda.</p>
+                                            <p>Algunos defectos que se presentan en confección son: saltos de costura, costuras recogidas, costuras sueltas, costuras torcidas, costuras con remates nudosos.</p>
+                                            <div class="cinta-azul mt-5"></div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img9.svg" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-04" role="tabpanel" aria-labelledby="nav-03-tab">
+                                            <h3>Materia prima e insumos</h3>
+                                            <p class="mt-5">En la recepción de materia prima e insumos se pueden detectar los siguientes defectos como se muestra en la tabla: </p>
+                                            <div class="cinta-azul mt-5"></div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img10.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist"><a class="nav-item nav-link active color-bt1" id="nav-01-tab" data-toggle="tab" href="#nav-01" role="tab" aria-controls="nav-01" aria-selected="true"> <strong>
+                                                <p>Patronaje </p>
+                                            </strong></a><a class="nav-item nav-link color-bt2" id="nav-02-tab" data-toggle="tab" href="#nav-02" role="tab" aria-controls="nav-02" aria-selected="false"> <strong>
+                                                <p>Corte</p>
+                                            </strong></a><a class="nav-item nav-link color-bt3" id="nav-03-tab" data-toggle="tab" href="#nav-03" role="tab" aria-controls="nav-03" aria-selected="false"> <strong>
+                                                <p>Confección </p>
+                                            </strong></a><a class="nav-item nav-link color-bt4" id="nav-04-tab" data-toggle="tab" href="#nav-04" role="tab" aria-controls="nav-04" aria-selected="false"> <strong>
+                                                <p>Insumos </p>
+                                            </strong></a></div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="sub-ecored mt-5" id="13">
+                            <h2>1.3. Uso de tablas militares</h2>
+                        </div>
+                        <p class="mt-5">Durante la segunda guerra mundial, Dodge y Roaming desarrollaron la técnica de muestreo de aceptación, aplicada a las balas. El plan estándar de muestreo que contiene el procedimiento y las tablas se nombra MIL STD 105D, aunque en el año de 1995 se rediseñó y cambio su nombre a ANSI/ASOCZ1.4, pero se sigue refiriendo a lo mismo. La norma ISO 2859 estandariza los procedimientos de muestreo por aceptación, en las inspecciones por atributos, donde se aplican las tablas militares y por lo tanto los NCA o AQL.</p>
+                        <p>Para realizar un plan de muestreo por atributos, simple, doble o múltiple es importante tener en cuenta la cantidad de cada lote, y la clasificación de los defectos, sean menores, mayores y críticos, para establecer el nivel de aceptación de la prenda. Además, se debe definir el nivel de inspección, se utiliza el general que corresponde al normal del tipo II. Los niveles especiales de inspección se utilizan en pruebas de laboratorio destructivas o en productos defectuosos.</p>
+                        <p class="mt-5">A continuación se observa la tabla militar estándar. </p>
+                        <p class="mt-5 text-center">Tabla militar 1</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img11.svg" alt="">
+                        <p class="mt-5">En la tabla siguiente se observa la distribución para los niveles de aceptación AQL </p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img12.svg" alt="">
+                        <p class="mt-5">A continuación se mencionan los pasos necesarios para el uso de tablas militares para realizar un plan estándar de muestreo, de acuerdo con lo indicado en la norma ISO 2859.</p>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-2"><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img13.svg" alt=""></div>
+                            <div class="col-9">
+                                <p>Con la tabla # 1 seleccionar la fila según el tamaño del lote.</p>
+                                <p>Según la fila elegida, se asigna el nivel en la columna de inspección general conforme a:</p>
+                                <div class="list mt-5">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p><strong>I:</strong> Reducida o baja, es permisiva, tamaño de muestra pequeña.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p><strong>II:</strong> Normal o general, tamaño de muestras es mayor.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p><strong>III:</strong> Rigorosa, estricta o severa, tamaño de muestra es más grande.</p>
+                                    </div>
+                                </div>
+                                <p class="mt-3">Teniendo la letra resultado del cruce de tamaño de lote y nivel de inspección, que corresponde a un código, se procede en tabla #2 a seleccionar columna de tamaño de muestra según columna de código.</p>
+                                <p>Teniendo los niveles de aceptación de los defectos, en donde conviene establecer:</p>
+                                <div class="list mt-5">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Defectos menores NCA entre 2,5% a 4%, depende del valor del producto, es decir NCA es alto.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Defectos mayores NCA entre 1,5% a 2,5%, término medio de NCA.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Defectos críticos NCA entre 0% a 0,65%, bajo NCA.</p>
+                                    </div>
+                                </div>
+                                <p class="mt-5">Una vez ubicado en columna el nivel de aceptación se cruza con el tamaño de la muestra, donde se concluye el número de las unidades con las que el lote es aceptado o rechazado.</p>
+                                <p>Cuando se selecciona una inspección reducida y un lote es rechazado se procede a cambiar el nivel de inspección a normal.</p>
+                                <p>En el caso de estar realizando nivel de inspección normal y dos lotes de cinco no son aceptados, por ejemplo, se debe cambiar el nivel de inspección a rigurosa, pero en caso contrario si las inspecciones de cinco lotes seguidos son aceptadas se puede seguir con el mismo nivel de inspección.</p>
+                            </div>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img14.svg" alt="">
+                        <section class="mt-5"> </section>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>2. Maquinaria y equipos en diferentes líneas de producción.</h1>
+                    </div>
+                    <div class="jumbotron bg-white"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img15.jpg" alt="">
+                        <div class="caja-amarillo">
+                            <p>Los informes hacen parte del sistema de información de la empresa, se relacionan directamente con los procesos de calidad, con el sistema de comunicación con todas las áreas de la empresa, lo que permite realizar un adecuado seguimiento a los procesos de control de calidad y una adecuada toma de decisiones en la empresa.</p>
+                            <p>Los informes de calidad son el resultado de las inspecciones y las auditorías, estos se presentan teniendo en cuenta la siguiente estructura:</p>
+                        </div><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img16.svg" alt="">
+                        <div class="sub-ecored mt-5" id="21">
+                            <h2>2.1. Indicadores de calidad</h2>
+                        </div>
+                        <p class="mt-">En alusión de la frase del físico Kelvin, “Lo que no se mide no se controla, lo que no se controla no se mejora, y lo que no se mejora, tiende a desaparecer”, los indicadores son indispensables para determinar el seguimiento de las metas y objetivos propuestos, con miras a la satisfacción del cliente, porque permiten medir de manera tangible y cuantificable, los resultados de calidad de los procesos, permitiendo su evaluación, por lo tanto muestra los niveles de cumplimiento de los requisitos de calidad. Con lo anterior se concluye que un indicador es un valor, resultado de una operación matemática donde se comparan dos o más características de calidad, cuyo valor se analiza para la toma de decisiones. </p>
+                        <p>Las características de los indicadores son las siguientes:</p>
+                        <div class="jumbotron fondo-azul2">
+                            <div class="list mt-5">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Realistas, es decir relacionados con las actividades actuales de calidad de la empresa.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Representativos de un área o de la empresa y de fácil interpretación.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Efectivos para que logren impacto.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Accesibles a las personas involucradas en la ejecución del proceso.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Sencillo de calcular y gestionar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Los indicadores pueden ser generales, específicos o ponderados; el procedimiento para aplicarlos es:</p>
+                        <div class="jumbotron fondo-azul2">
+                            <div class="list mt-5">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Seleccionar los indicadores a establecer en los procesos críticos, es decir los más importantes o donde se encuentren niveles bajos de calidad.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Definir los datos a analizar del proceso.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Nombrar la persona responsable de gestionar el resultado, el indicador puede ser del proceso o del equipo de calidad, o de ambos.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Realizar el cálculo del indicador, especificar la periodicidad de realizarlo.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Utilizar gráficos para visualizar resultados del indicador.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Presentar en informes o publicar en carteleras de la empresa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-5 mt-5 borde-fucsia"><img class="img-top img-fluid" src="assets/images/pages/ilustraciones/img17.svg" alt="">
+                                <p class="mt-5">Para evaluar los resultados de los niveles de no calidad, es importante cuantificar los reprocesos realizados en un lote, una referencia, o una producción, con el fin de poder establecer acciones de mejora que reduzcan los defectos.</p>
+                                <p>Para su cálculo se tiene en cuenta la cantidad del lote, cantidad de reprocesos y las causas del reproceso. El indicador se calcula de la siguiente manera:</p><img class="img-a mt-3 img-fluid" src="assets/images/pages/ilustraciones/img19.svg" alt="">
+                                <p class="mt-3">Según las causas se pueden agrupar para conocer su incidencia en el total de los reprocesos.</p>
+                            </div>
+                            <div class="col-5 mt-5 borde-azul"><img class="img-top img-fluid" src="assets/images/pages/ilustraciones/img18.svg" alt="">
+                                <p class="mt-5">Se habla del indicador aceptable de rechazo en el caso de los muestreos por atributos, es decir, antes de la salida de las prendas al cliente.</p>
+                                <p>Con el fin de evaluar el nivel de devoluciones de las prendas por partes del cliente, los cuales afectan los costos de la empresa pues son costos de no calidad. Se presenta el siguiente indicador:</p><img class="img-a mt-3 img-fluid" src="assets/images/pages/ilustraciones/img20.svg" alt="">
+                                <p class="mt-3"> </p>
+                            </div>
+                        </div>
+                        <div class="sub-ecored mt-5" id="22">
+                            <h2>2.2. Técnicas de calidad: 7 herramientas de control de calidad</h2>
+                        </div>
+                        <p class="mt-5">Con respecto a la gestión de calidad, se tienen técnicas básicas, las cuales consisten en medir las características utilizando la estadística, una vez se recopilan los datos, se analizan utilizando las herramientas para visualizar su variabilidad y poder soportar el proceso de toma de decisiones. A pesar de existir gran variedad de técnicas y herramientas las 7 básicas son: </p>
+                        <h3 class="mt-5">2.2.1. Hoja de verificación o chequeo</h3>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-2"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img21.svg" alt=""></div>
+                            <div class="col-8">
+                                <p>Es una herramienta donde se registran los datos de manera organizada, para realizar los análisis correspondientes de calidad, se realiza con el fin de recolectar y utilizar los datos para posteriores análisis, reducir los riesgos asociaos a la toma de decisiones y acelerar la detección y resolución de problemas, además de apoyar otras herramientas estadísticas de calidad. </p>
+                                <p>El procedimiento de elaboración es el siguiente:</p>
+                            </div>
+                        </div>
+                        <div class="list mt-5">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Definir la información requerida, los datos y sus características.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Definir la mejor presentación de los datos en un formato.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Utilizar símbolos, números, letras para registrar datos.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Realizar instructivo para dar a conocer el diligenciamiento de la hoja</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Crear tablas para resumir datos y clasificarlos para luego desarrollar gráficos para visualizar los resultados.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Interpretar, analizar y aplicar la información según el objetivo planteado.</p>
+                            </div>
+                        </div>
+                        <p class="mt-5">Se conocen con anterioridad las hojas de inspección de producto en proceso, inspección de producto terminado, inspección de trazo y corte, las cuales recopilan información en los procesos relacionados de los defectos presentados, pero se pueden crear otras, según las necesidades de cada proceso y las directrices de la empresa.</p>
+                        <p>Ejemplo. En la siguiente tabla se observa una hoja de verificación diligenciada para una inspección de producto terminado.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img22.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img23.svg" alt="">
+                        <h3 class="mt-5">2.2.2. Histograma</h3>
+                        <p class="mt-5">Con el uso del histograma se pueden representar los datos, visualizando su dispersión con respecto a la media. Se utiliza con el fin de mostrar la variabilidad de los datos y analizar el comportamiento del proceso. Pertenece a la fase medir de seis sigma.</p>
+                        <p>Esta es una gráfica que permite analizar la distribución de la información o datos de un proceso en contraste con el número de ocurrencias de cada valor, la finalidad es diagnosticar rápidamente la panorámica del comportamiento de un proceso a través del tiempo, además permite ver la variación de los datos y analizar el comportamiento de un proceso. </p>
+                        <p><strong>El procedimiento para realizar un histograma es el siguiente:</strong></p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img24.svg" alt="">
+                        <p class="mt-5">En el siguiente gráfico podrá observar un histograma diligenciado para la cantidad de defectos en rollos de tela.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img25.png" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img26.svg" alt="">
+                        <h3 class="mt-5">2.2.3. Diagrama causa-efecto</h3>
+                        <p class="mt-5">También llamado de espina de pescado por su forma, creado por Kaoru Ishikawa como herramienta en los círculos de calidad. Se utiliza para representar gráficamente los factores que afectan un problema de calidad; se definen las principales causas y luego las causas derivadas de las principales, consiste en una flecha horizontal apuntando hacia el problema y las seis principales flechas en diagonal a 30°, orientadas hacia la flecha horizontal, de cada flecha se van creando a medida que se va analizando nuevas flechas, que corresponden a causas secundarias. </p>
+                        <p>Esta herramienta hace parte de la fase definir de Seis sigma, uno de sus objetivos es representar gráficamente las causas y efectos de un problema par ayudar al equipo de trabajo a analizarlas y eliminarlas. </p>
+                        <p><strong>El procedimiento para desarrollar el diagrama es el siguiente:</strong></p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img27.svg" alt="">
+                        <p class="mt-5">La herramienta es automatizada en los programas especiales de análisis de datos. </p>
+                        <p>En el siguiente gráfico podrá observar un diagrama de causa efecto diligenciado para las causas defectos de calidad en las camisetas tipo polo.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img28.svg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img29.svg" alt="">
+                        <h3 class="mt-5">2.2.4. Diagrama de Pareto</h3>
+                        <p class="mt-5">Su nombre deriva del apellido del economista italiano, quien formuló su principio, que consiste en determinar que muy pocas causas son las responsables del 80% del total de los defectos, y muchas causas secundarias son responsables del 20% del total de los defectos, por consiguiente, se habla de pocos vitales que constituyen la parte más grande, el porcentaje de contribución más alto con respecto al total y muchos triviales son factores numerosos pero contribuyen solo con una pequeña parte o con un bajo porcentaje respecto al total.</p>
+                        <p>Para visualizar lo anterior mencionado se desarrolla un gráfico de barras para representar de manera ordenada los pocos vitales (80%) y los muchos triviales (20%).</p>
+                        <p>El objetivo del diagrama es poder visualizar los problemas o defectos que inciden más, con el fin de priorizar las causas para su atención, teniendo en cuenta dicha clasificación. Hace parte de la fase análisis de seis sigma.</p>
+                        <p><strong>El procedimiento para realizar diagrama de Pareto se observa en la siguiente tabla:</strong></p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img30.svg" alt="">
+                        <p class="mt-5">La herramienta es automatizada en los programas especiales de análisis de datos. En el siguiente gráfico se observa un diagrama de Pareto diligenciado para las causas defectos de calidad en tapabocas.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img31.png" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img32.svg" alt="">
+                        <h3 class="mt-5">2.2.5. Estratificación</h3>
+                        <p class="mt-5">En relación con el manejo de la información recolectada, debe estar clasificada en grupos que tengan características comunes, los cuales pueden ser en relación con su origen o los efectos generados. Algunas categorías o estratos pueden ser materiales, maquinarias, productos, fechas, proveedores, lotes, localización del defecto, tipo de defecto.</p>
+                        <p>Sirve de base para la construcción de histogramas y diagramas de Pareto. Es útil para identificar causas en variación de los datos, las causas de los problemas y poder analizar los valores promedio en comparación con los valores en cada categoría o estrato.</p>
+                        <p><strong>El procedimiento para realizar los gráficos se puede ver en la siguiente tabla:</strong></p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img33.svg" alt="">
+                        <p class="mt-5">En el siguiente gráfico podrá observar dos tipos de gráficos de estratificación, diligenciados para las causas de rechazo en los módulos de producción.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img34.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img35.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img36.svg" alt="">
+                        <h3 class="mt-5">2.2.6. Diagrama de correlación</h3>
+                        <p class="mt-5">Llamado también de dispersión, investiga si existe relación entre dos características de calidad de un proceso. La característica de la abscisa que corresponde al eje en X representa la característica que se interpreta como causa, y la característica de las ordenadas, es decir en el eje Y corresponde a la variable interpretado como efecto.</p>
+                        <p>Es útil en las características cuya relación se compruebe con este gráfico, debido que al controlar una, por consiguiente, se controla la otra característica. </p>
+                        <p>Hace parte de la fase analizar y mejorar de la herramienta Seis sigma y permite observar la relación entre dos variables y la intensidad de la relación, así como facilita el reconocimiento de correlaciones. </p>
+                        <p><strong>Los resultados de la correlación pueden ser:</strong></p>
+                        <div class="list mt-5">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>Correlación lineal positiva:</strong> al aumentar el valor de una característica se aumenta la otra.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>Correlación lineal negativa:</strong> al aumentar el valor de una característica se disminuye la otra.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>Correlación no lineal:</strong> existe relación entre las características de forma curva.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>Sin correlación:</strong> no existe relación alguna entre las características.</p>
+                            </div>
+                        </div>
+                        <p><strong>El procedimiento para realizar el diagrama se observa en la siguiente tabla:</strong></p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img37.svg" alt="">
+                        <p class="mt-5">Estos gráficos se pueden realizar en el programa de office Excel. </p>
+                        <p>En el siguiente gráfico podrá observar un diagrama de correlación diligenciado para las variables tiempo de capacitación y cantidad de defectos.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img38.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img39.svg" alt="">
+                        <h3 class="mt-5">2.2.7. Gráfico de control</h3>
+                        <p class="mt-5">Esta herramienta representa de manera organizada en el tiempo, datos que corresponden a los resultados de una característica de calidad en un periodo de tiempo. Con el fin de visualizar el comportamiento de la característica a medir del proceso, entre los límites de control establecidos para realizar seguimiento. Pertenece a la fase analizar y controlar de la herramienta seis sigma.</p>
+                        <p>El gráfico comprende el eje X que corresponde al tiempo, el eje Y representa la característica medible. Además, contiene 3 líneas horizontales las cuales corresponde a:</p>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>LC:</strong> Línea central, es el promedio del proceso.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>LCS:</strong> Límite de control superior.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p><strong>LCI:</strong> Límite de control inferior.</p>
+                            </div>
+                        </div>
+                        <p class="mt-5">El espacio entre los límites marca el intervalo dentro del cual se espera que desarrolle el proceso evaluado. los datos resultantes de la medición del desempeño observado del proceso en determinados periodos de tiempo se marcan con puntos y se unen en el gráfico, para realizar el análisis. </p>
+                        <p>Además de visualizar el comportamiento del proceso en el tiempo la herramienta permite determinar el estado de control de un proceso, determinar las muestras que caen dentro o fuera de los límites de control, determinar las trayectorias anormales en un proceso estandarizado y ajustar el proceso. </p>
+                        <p>Se pueden desarrollar gráficos de control por variables o atributos, los cuales son:</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img40.svg" alt="">
+                        <p class="mt-5">Los gráficos utilizados comúnmente son de medias y de rango de manera simultánea o los gráficos de medias y desviación estándar.</p>
+                        <p>El procedimiento para realizar gráficos de control se observe en la siguiente tabla:</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img41.svg" alt="">
+                        <p class="mt-5">Estos gráficos se pueden realizar en el programa de office Excel. </p>
+                        <p>En las siguientes imágenes podrá observar gráficos de control de medias, rangos y desviación estándar, diligenciados para la cantidad de defectos en las referencias.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img42.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img43.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img44.jpg" alt=""><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img45.svg" alt="">
+                        <div class="sub-ecored mt-5" id="23">
+                            <h2>2.3. Plan de acciones de calidad</h2>
+                        </div>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-4"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img46.svg" alt=""></div>
+                            <div class="col-6">
+                                <p>El plan de calidad de acuerdo con la norma ISO 9001:2015 “Es una especificación de los procedimientos y recursos asociados a aplicar, cuándo deben aplicarse y quién tiene que aplicarlos a un objeto específico”. Esto para el cumplimiento de requisitos, con el fin de validar nuevos productos o procesos, para optimizar recursos o para implementar un sistema de calidad.</p>
+                                <p>Una vez se han analizado las causas de los problemas o defectos; en el comportamiento de los procesos se requiere definir un plan donde se especifiquen los procedimientos, los recursos para lograr los cambios requeridos con el fin de mejorar la calidad, para ello es necesario definir quienes, cuándo, dónde y qué recursos se necesitan para intervenir el proceso o producto.</p>
+                            </div>
+                        </div>
+                        <p><strong>Los pasos para desarrollar un plan de calidad son:</strong></p>
+                        <div class="jumbotron fondo-azul2">
+                            <div class="list mt-5">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Identificar las necesidades de un plan de calidad.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Especificar requisitos de calidad, recursos, especificaciones técnicas, normas.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Definir alcance y tiempos requeridos.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Estructurar el plan: recopilar documentación, asignar responsables, definir acciones.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Implementar plan.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Realizar seguimiento y mejoras.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Contenido de un plan de calidad:</p>
+                        <div class="jumbotron fondo-azul2">
+                            <div class="list mt-5">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Alcance.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Entradas requeridas: requisitos del cliente, especificaciones técnicas, normativas.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Definir objetivos y metas.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Establecer responsabilidades.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Definir control de información: documentos, registros.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Definir recursos y su manejo.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Definir las acciones a desarrollar en los productos o en los procesos (diseño y desarrollo, compras, producción).</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Establecer los tiempos de las acciones.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Establecer seguimiento y mediciones: herramientas estadísticas de calidad, indicadores.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Especificar controles de producto no conforme.</p>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="list__item">
+                                    <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                </div>
+                                <div class="list__txt">
+                                    <p>Establecer auditorías.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Para establecer un plan de acción específico de calidad, y solucionar un problema o corregir un defecto es necesario, diseñar las acciones, definir los responsables y los tiempos de ejecución, así como el seguimiento para evaluar si se corrigió el problema definitivamente.</p>
+                        <h3 class="mt-5">2.3.1. Acciones correctivas de calidad</h3>
+                        <p class="mt-5">Conforme la norma ISO 9001:2015 es "la acción para eliminar la causa de una No Conformidad y evitar que vuelva a ocurrir", por lo cual la acción debe eliminar las causas de la no conformidad al realizar las acciones necesarias que generen los cambios que mejoren la calidad, los cuales deben evaluarse.</p>
+                        <p>Es importante comprender la diferencia entre acción correctiva y la corrección de la no conformidad; debido a que la segunda se refiere a corregir el defecto, sin corregir las causas que genera el problema.</p>
+                        <p>Las acciones deben estar definidas en el plan de calidad una vez se realiza el análisis de los problemas o defectos con las herramientas de calidad. </p>
+                        <p>Para aplicar las acciones correctivas se requiere:</p>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-4"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img47.svg" alt=""></div>
+                            <div class="col-6">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Establecer los tiempos para aplicarlas, lo cual debe ser en el menor tiempo posible.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Minimizar las consecuencias de los problemas o defectos, por ejemplo, realizar descuento al cliente por los defectos de la prenda.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Evaluar si es realmente necesario la aplicación de la acción.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Diseñar acciones en equipo para obtener una solución acertada.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Implementar plan de acción especifico de calidad, es decir realizar los cambios.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Realizar seguimiento de los cambios, evaluando los cambios.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Ejemplo. En la producción de camisetas se recibieron varias devoluciones debido a que se migró el color en el sesgo de escote y mangas, se detectó a partir del análisis que el problema era en un lote.</p>
+                        <p><strong>Las acciones correctivas que se realizaron fueron:</strong></p>
+                        <div class="list mt-5">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Recoger el lote del problema para que no se siguieran vendiendo.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Realizar inspecciones en todas las camisetas del lote.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Realizar pruebas de laboratorio en los textiles que se van a producir en los siguientes lotes.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Utilizar herramientas de control estadístico e indicadores.</p>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__item">
+                                <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                            </div>
+                            <div class="list__txt">
+                                <p>Analizar y realizar plan de acción.</p>
+                            </div>
+                        </div>
+                        <h3 class="mt-5">2.3.2. Propuesta de acciones de mejora</h3>
+                        <p class="mt-5">Según norma ISO 9001:2015 el numeral de riesgos y oportunidades, habla de las acciones que se establezcan con el fin de lograr mejorar la calidad de la empresa, impactando en la planeación, aumentando indicadores de eficiencia o eficacia de las actividades del sistema de gestión de calidad.</p>
+                        <p>Las acciones de mejora también deben estar estructuradas, dentro del plan de calidad, en donde se describan las acciones, los responsables y las fechas para implementarlas.</p>
+                        <p>Los pasos para realizar las acciones de mejora son los siguientes:</p>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-4"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img48.svg" alt=""></div>
+                            <div class="col-6">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Analizar los riesgos de los procesos.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Analizar los indicadores de los procesos.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Establecer la auditoría al sistema.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Recopilar las no conformidades.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Análisis de los problemas o defectos.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Implementación de las acciones de mejora según plan específico o de acción de calidad.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Realizar seguimiento de las acciones.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-fluid" src="assets/images/pages/ilustraciones/vineta.svg" alt=""></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p>Evaluar el sistema de calidad con mecanismos como evaluar la satisfacción del cliente, sea interno o externo. Las evaluaciones deben ser frecuentes para conocer la mejora de la calidad en la eficiencia y eficacia de la empresa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Es importante considerar que los problemas y defectos que se presentan en una empresa son oportunidades de mejora, las acciones que se emprendan deben impactar directamente en lograr los objetivos de calidad. </p>
+                        <section class="mt-5"> </section>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p><strong class="mr-2">AOQ=CPS:</strong>calidad promedio de salida. Es la calidad promedio que se obtiene después del proceso de inspección.</p>
+                        <hr>
+                        <p><strong class="mr-2">AOQL=LCPS:</strong>límite de calidad promedio de salida. Resultado de la peor calidad promedio que puede obtenerse en el proceso de la inspección.</p>
+                        <hr>
+                        <p><strong class="mr-2">AQL=NCA:</strong>siglas de las palabras en inglés de Level Aceptation Quality, nivel de calidad aceptable, es el porcentaje máximo de unidades aceptable para el proceso, el cual debe estar especificado en la ficha técnica, contrato, órdenes de compra.</p>
+                        <hr>
+                        <p><strong class="mr-2">Causas asignables:</strong>llamada también causa especial son las que varían de manera inusual un proceso, debido a que antes no se había presentado, no se había observado ni cuantificado.</p>
+                        <hr>
+                        <p><strong class="mr-2">Defecto:</strong>no cumplimiento de los requisitos de la prenda, desviaciones de los estándares de calidad de la prenda.</p>
+                        <hr>
+                        <p><strong class="mr-2">LTPD =NCL:</strong>traducción de las palabras de las siglas en ingles Lot Tolerance Proportion Defective, proporción defectuosa tolerable en el lote, es el peor nivel de calidad del lote que el cliente puede aceptar. También conocido como el Nivel de Calidad Límite. Nivel de calidad no satisfactorio, por lo tanto, debe ser rechazado el lote.</p>
+                        <hr>
+                        <p><strong class="mr-2">Rango:</strong>Es el intervalo comprendido entre el mayor y menor valor de un número de datos con el fin de medir su variación.</p>
+                        <hr>
+                        <p><strong class="mr-2">Neps:</strong>Pequeñas fibras gruesas en forma de puntos que se observan en el textil, es un defecto.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1> </h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Autor, (año del documento o material), Nombre del documento o material.</th>
+                                    <th class="text-center">Tipo de material ( Video, capítulo de libro, articulo, otro) </th>
+                                    <th class="text-center" style="width:150px">Enlace del Recurso o Archivo del documento o material</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Instructivo para desarrollar diagrama de Pareto. </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Instructivo_desarrollar_pareto.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Plantilla Pareto.</td>
+                                    <td>Archivo Excel </td>
+                                    <td> <a href="media/documentos/Plantilla_Pareto.xlsx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Instructivo para desarrollar Histograma . </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Instructivo_desarrollar_histograma.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Plantilla Histograma.</td>
+                                    <td>Archivo Excel </td>
+                                    <td> <a href="media/documentos/Plantilla_histograma.xlsx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Niveles de defectos. </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Niveles_de_defectos.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Instructivo para desarrollar diagrama de estratificación. </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Instructivo_desarrollar_estratificacion.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Plantilla Estratificación.</td>
+                                    <td>Archivo Excel </td>
+                                    <td> <a href="media/documentos/Plantilla_estratificacion.xlsx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Instructivo para desarrollar diagrama de control. </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Instructivo_desarrollar_diagrama_control.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Plantilla gráfico control.</td>
+                                    <td>Archivo Excel </td>
+                                    <td> <a href="media/documentos/Plantilla_grafico_control.xlsx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Instructivo para desarrollar diagrama de correlación. </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Instructivo_desarrollar_correlacion.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Plantilla correlación .</td>
+                                    <td>Archivo Excel </td>
+                                    <td> <a href="media/documentos/Plantilla_correlacion.xlsx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Gutiérrez, S. (2020). Uso de tablas militares MIL STD 105D </td>
+                                    <td>Archivo Word</td>
+                                    <td> <a href="media/documentos/Uso_de_tablas_militares_ MIL_STD_105D.docx" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Brand Arroyave, C. (2008). Control de calidad para medianas y pequeñas empresas. Itagüí. [s.n.]. Editor: Universidad Jaume I. (2006). Manual de control estadístico de calidad: teoría y aplicaciones [E-book]. Consultado 24 septiembre 2020, de<a class="ml-2" href="http://www.digitaliapublishing.com.bdigital.sena.edu.co/a/14732/manual-de-control-estadistico-de-calidad---teoria-y-aplicaciones." target="_blank">http://www.digitaliapublishing.com.bdigital.sena.edu.co/a/14732/manual-de-control-estadistico-de-calidad---teoria-y-aplicaciones.</a></p>
+                        <hr>
+                        <p>Evans, J., &amp; Lindsay, W. (2015). Administración y Control de la calidad [E-book] (9th ed.). Cengage. Consultado 24 septiembre 2020, de<a class="ml-2" href="http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=786." target="_blank">http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=786.</a></p>
+                        <hr>
+                        <p>Gutiérrez Pulido, H. (2013). Control estadístico de la calidad y Seis Sigma [E-book] (3rd ed.). McGraw-Hill Interamericana. Consultado 24 septiembre 2020, de<a class="ml-2" href="http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=280." target="_blank">http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=280.</a></p>
+                        <hr>
+                        <p>Jaramillo Zapata, J. (1990). Control de calidad en la confección [E-book]. Servicio Nacional de Aprendizaje (SENA). Consultado 24 septiembre 2020, de<a class="ml-2" href="https://hdl.handle.net/11404/4253." target="_blank">https://hdl.handle.net/11404/4253.</a></p>
+                        <hr>
+                        <p>Martínez Aguirre, G. (2012). La ingeniería en la industria de la confección. México. Editorial Trillas.<a class="ml-2" target="_blank"></a></p>
+                        <hr>
+                        <p>Pérez Marqués, M. (2016). CONTROL DE CALIDAD TECNICAS Y HERRAMIENTAS (1st ed.). México. Alfaomega grupo editor.<a class="ml-2" target="_blank"></a></p>
+                        <hr>
+                        <p>Pola Maceda, Á. (2009). Aplicación de la estadística al control de calidad. Marcombo.<a class="ml-2" href="https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/45842" target="_blank">https://elibro-net.bdigital.sena.edu.co/es/lc/senavirtual/titulos/45842</a></p>
+                        <hr>
+                        <p>Servicio Nacional de Aprendizaje (SENA). (1973). Programa de control de calidad. Unidad 1.5. Variabilidad de la calidad [E-book]. Consultado 5 octubre 2020, de<a class="ml-2" href="https://hdl.handle.net/11404/6665." target="_blank">https://hdl.handle.net/11404/6665.</a></p>
+                        <hr>
+                        <p>Villamizar Figueroa, J. (1992). Técnicas básicas para el análisis de datos [E-book]. Servicio Nacional de Aprendizaje (SENA). Consultado 5 octubre 2020, de<a class="ml-2" href="https://hdl.handle.net/11404/1907." target="_blank">https://hdl.handle.net/11404/1907.</a></p>
+                        <hr>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-md-5 my-4">
+                                <div class="jumbotron p-4">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="text-center pl-4"><i class="fa fa-picture-o fa-2x text-center"></i></p>
+                                        <p class="text-center flex-grow-1">Fotografías y vectores tomados de <a href="https://www.shutterstock.com/" target="_blank">https://www.shutterstock.com/</a> y <a href="https://www.freepik.es/" target="_blank">https://www.freepik.es/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 my-4">
+                                <div class="jumbotron p-4">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="text-center pl-4"><i class="fa fa-creative-commons fa-2x text-center"></i></p>
+                                        <p class="text-center flex-grow-1">Licencia Creative Commons <br> <strong>CC BY-NC-SA</strong><br> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank">Ver licencia.</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">CONTROL DE CALIDAD EN CONFECCIÓN INDUSTRIAL DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzon </strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-6">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <p class="footer-texto mb-2"><strong>Sandra Cecilia Gutiérrez</strong><br /><span class="text-small">Experta temática<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro Industrial del Diseño y la Manufactura</span><br><span class="text-small">Regional Santander</span></p>
+                        <p class="footer-texto mb-2"><strong>Vilma Lucía Perilla Méndez</strong><br /> <span class="text-small">Diseñador instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Gestión Empresarial</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                        <p class="footer-texto mb-2"><strong>Oscar Andrés Fernández Urrego</strong><br /> <span class="text-small">Evaluador instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Industria de la Comunicación Gráfica – CENIGRAF</span><br><span class="text-small">Regional Bogotá</span></p>
+                        <p class="footer-texto mb-2"><strong>Julieth Paola Vital López</strong><br /> <span class="text-small">Corrección de estilo<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Industria de la Comunicación Gráfica</span><br><span class="text-small">Regional Distrito Capital </span></p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto"><strong>Leyson Fabian Castaño Perez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto"> <strong>Adriana Rincón Avendaño</strong><br />
+                            <strong>José Jaime Luis Tang Pinzón</strong><br />
+                            <strong>Yazmin Rocio Figueroa Pacheco</strong><br /><span class="text-small">Diseño web & producción audiovisual<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander</span></p>
+                        <p class="footer-texto"><strong>Brayan Stiven Pinto Diaz</strong><br /> <span class="text-small">Desarrollo front-end<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                        <h4 class="footer-subtitulo-2 mt-5">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"><strong>Brayan Stiven Pinto Diaz</strong><br /> <span class="text-small">Validación de recursos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center mt-5"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>
