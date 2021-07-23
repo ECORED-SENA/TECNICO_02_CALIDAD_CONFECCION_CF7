@@ -1,4 +1,7 @@
 {
-    "git.ignoreLimitWarning": true,
-    "liveServer.settings.port": 5501
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.run": "onSave",
 }
