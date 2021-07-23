@@ -1,8 +1,8 @@
-# **sena-base-2021 v4.0.0**
+# **Planes de mantenimiento de maquinaria y equipos**
 
 ## **Enlace GitHubPages**
 
-[https://ecored-sena.github.io/ECORED-BASE-2021](https://ecored-sena.github.io/ECORED-BASE-2021)
+[https://ecored-sena.github.io/TECNICO_02_CALIDAD_CONFECCION_CF7/](https://ecored-sena.github.io/TECNICO_02_CALIDAD_CONFECCION_CF7/)
 
 #
 
